@@ -14,7 +14,7 @@ function Navdar() {
 
         <div className="flex h-20 items-center justify-between">
 
-          {/* Left Side */}
+       
           <div className="flex items-center gap-4">
 
             {/* Mobile Menu Button */}
@@ -27,7 +27,9 @@ function Navdar() {
               {menuOpen ? "✕" : "☰"}
             </button>
 
-            {/* Logo - No Cursor Pointer */}
+         
+
+
             <div className="shrink-0">
               <img
                 src={logo}
@@ -38,7 +40,9 @@ function Navdar() {
 
           </div>
 
-          {/* Desktop Menu */}
+      
+
+
           <div className="hidden items-center gap-8 lg:flex">
 
             <a
@@ -78,10 +82,12 @@ function Navdar() {
 
           </div>
 
-          {/* Right Side Buttons */}
+       
+
+
           <div className="flex items-center gap-2 lg:gap-3">
 
-            {/* Sign In */}
+          
             <button
               type="button"
               className="cursor-pointer rounded-lg border border-gray-300 bg-white px-3 py-2 text-xs font-medium text-gray-700 hover:border-pink-400 hover:text-pink-600 lg:px-5 lg:py-2.5 lg:text-sm"
@@ -89,7 +95,7 @@ function Navdar() {
               Sign In
             </button>
 
-            {/* Sign Up */}
+         
             <button
               type="button"
               className="cursor-pointer rounded-lg bg-pink-500 px-3 py-2 text-xs font-semibold text-white hover:bg-pink-600 lg:px-6 lg:py-2.5 lg:text-sm"
@@ -101,7 +107,7 @@ function Navdar() {
 
         </div>
 
-        {/* Mobile Menu */}
+   
         {menuOpen && (
           <div className="border-t border-gray-100 py-4 lg:hidden">
 

@@ -5,7 +5,7 @@ function Footer() {
     <footer className="mt-20 border-t border-gray-200 bg-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 md:grid-cols-4">
 
-        {/* Brand */}
+
         <div>
           <a href="#" className="inline-block">
             <img
@@ -50,7 +50,8 @@ function Footer() {
           </div>
         </div>
 
-        {/* Product */}
+        
+
         <div>
           <h3 className="text-sm font-bold uppercase text-gray-900">
             Product
@@ -77,7 +78,9 @@ function Footer() {
           </div>
         </div>
 
-        {/* Company */}
+
+
+
         <div>
           <h3 className="text-sm font-bold uppercase text-gray-900">
             Company
@@ -98,7 +101,8 @@ function Footer() {
           </div>
         </div>
 
-        {/* Legal */}
+
+
         <div>
           <h3 className="text-sm font-bold uppercase text-gray-900">
             Legal
@@ -116,7 +120,10 @@ function Footer() {
         </div>
       </div>
 
-      {/* Bottom */}
+     
+
+
+
       <div className="border-t border-gray-100">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-5 text-xs text-gray-400 sm:flex-row">
           <p>© 2026 Dev Stack. All rights reserved.</p>
