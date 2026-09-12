@@ -26,10 +26,10 @@ my-A05-DevStack is a web application that helps users explore different developm
 
 <td width="45%" align="center">
 
-<img src="https://skillicons.dev/icons?i=js,react,nodejs,graphql,docker" width="300">
+<img src="https://skillicons.dev/icons?i=react,typescript,tailwind,vite,html,css" width="300">
 
 <br><br>
 
-<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="380">
+<img src="https://skillicons.dev/icons?i=json" width="60">
 
 </td>
