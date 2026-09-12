@@ -15,7 +15,6 @@ function App() {
   const [stack, setStack] = useState<Technology[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Load JSON data
   useEffect(() => {
     fetch("/data.json")
       .then((response) => {
@@ -36,30 +35,21 @@ function App() {
       });
   }, []);
 
-  // Add technology
   const handleAdd = (technology: Technology) => {
     const alreadyAdded = stack.some(
       (item) => item.id === technology.id
     );
 
     if (alreadyAdded) {
-      toast.warning(
-        `${technology.name} is already added!`
-      );
+      toast.warning(`${technology.name} is already added!`);
       return;
     }
 
-    setStack((previous) => [
-      ...previous,
-      technology,
-    ]);
+    setStack((previous) => [...previous, technology]);
 
-    toast.success(
-     `${technology.name} added to your stack!`
-    );
+    toast.success(`${technology.name} added to your stack!`);
   };
 
-  // Remove one
   const handleRemove = (id: string) => {
     const removedTechnology = stack.find(
       (item) => item.id === id
@@ -71,12 +61,11 @@ function App() {
 
     if (removedTechnology) {
       toast.info(
-       ` ${removedTechnology.name} removed from your stack!`
+        `${removedTechnology.name} removed from your stack!`
       );
     }
   };
 
-  // Remove all
   const handleRemoveAll = () => {
     if (stack.length === 0) {
       return;
@@ -89,7 +78,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-
       <Navbar />
 
       <Hero />
@@ -98,7 +86,6 @@ function App() {
         id="technologies"
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
       >
-
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-slate-900">
             Explore the{" "}
@@ -112,7 +99,6 @@ function App() {
           </p>
         </div>
 
-        {/* Loading */}
         {loading ? (
           <div className="flex min-h-60 items-center justify-center">
             <div className="text-center">
@@ -124,22 +110,8 @@ function App() {
             </div>
           </div>
         ) : (
-
-          /*
-            Desktop:
-            3 columns technology + 1 column sidebar
-
-            Tablet:
-            2 columns
-
-            Mobile:
-            1 column
-          */
           <div className="grid gap-6 lg:grid-cols-4">
-
-            {/* Technology Cards */}
             <div className="grid gap-5 sm:grid-cols-2 lg:col-span-3 lg:grid-cols-3">
-
               {technologies.map((technology) => (
                 <TechnologyCard
                   key={technology.id}
@@ -150,10 +122,8 @@ function App() {
                   onAdd={handleAdd}
                 />
               ))}
-
             </div>
 
-            {/* Your Stack */}
             <div className="lg:col-span-1">
               <StackSidebar
                 stack={stack}
@@ -161,10 +131,8 @@ function App() {
                 onRemoveAll={handleRemoveAll}
               />
             </div>
-
           </div>
         )}
-
       </main>
 
       <Footer />
@@ -176,7 +144,6 @@ function App() {
         closeOnClick
         pauseOnHover
       />
-
     </div>
   );
 }

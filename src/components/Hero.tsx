@@ -28,7 +28,6 @@ function Hero() {
             your next project.
           </p>
 
-          {/* Buttons */}
           <div className="mt-8 flex flex-wrap gap-3">
             <button
               onClick={handleExplore}
@@ -38,11 +37,7 @@ function Hero() {
             </button>
 
             <button
-              onClick={() =>
-                document
-                  .getElementById("technologies")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
+              onClick={handleExplore}
               className="rounded-lg border border-gray-200 px-5 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
             >
               Learn More
@@ -50,7 +45,7 @@ function Hero() {
           </div>
         </div>
 
-        {/* Right Side Image */}
+        {/* Right Side */}
         <div className="flex justify-center">
           <img
             src={bannerStack}
@@ -58,7 +53,6 @@ function Hero() {
             className="w-full max-w-md object-contain"
           />
         </div>
-
       </div>
     </section>
   );
