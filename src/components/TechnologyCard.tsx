@@ -87,11 +87,17 @@ function TechnologyCard({
         disabled={isAdded}
         className={`mt-4 w-full rounded-lg py-3 text-sm font-semibold transition ${
           isAdded
-            ? "cursor-not-allowed bg-gray-200 text-gray-600"
+            ? "cursor-not-allowed bg-gray-200"
             : "bg-slate-950 text-white hover:bg-slate-800"
         }`}
       >
-        {isAdded ? "✓ Added to Stack" : "Add to Stack"}
+        {isAdded ? (
+          <span className="bg-gradient-to-r from-red-500 via-yellow-400 via-green-500 to-blue-500 bg-clip-text text-transparent">
+            ✓ Added to Stack
+          </span>
+        ) : (
+          "Add to Stack"
+        )}
       </button>
     </div>
   );

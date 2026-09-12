@@ -11,8 +11,7 @@ function Hero() {
     <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
       <div className="grid items-center gap-10 md:grid-cols-2">
 
-
-
+        {/* Left Side */}
         <div>
           <h1 className="text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl">
             Build Your Ideal
@@ -46,9 +45,7 @@ function Hero() {
           </div>
         </div>
 
-
-
-
+        {/* Right Side */}
         <div className="flex justify-center">
           <img
             src={bannerStack}
