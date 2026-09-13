@@ -92,8 +92,8 @@ function TechnologyCard({
         }`}
       >
         {isAdded ? (
-          <span className="bg-gradient-to-r from-red-500 via-yellow-400 via-green-500 to-blue-500 bg-clip-text text-transparent">
-            ✓ Added to Stack
+         <span className="bg-[linear-gradient(to_right,red,orange,yellow,green,blue,indigo,violet)] bg-clip-text text-transparent font-bold">
+  ✓ Added to Stack
           </span>
         ) : (
           "Add to Stack"
