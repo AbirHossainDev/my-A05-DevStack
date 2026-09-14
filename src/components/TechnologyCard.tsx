@@ -48,8 +48,21 @@ function TechnologyCard({
 
   return (
     <div
-      className={`flex min-h-[330px] flex-col rounded-2xl border-2 bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md ${getBorderColor()}`}
+      className={`
+        flex min-h-[330px] flex-col
+        rounded-2xl
+        border-2
+        bg-white
+        p-4
+        shadow-sm
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:shadow-md
+        ${getBorderColor()}
+      `}
     >
+      {/* Top Section */}
       <div className="flex items-start justify-between">
         <img
           src={technology.icon}
@@ -62,14 +75,17 @@ function TechnologyCard({
         </span>
       </div>
 
+      {/* Technology Name */}
       <h3 className="mt-5 text-lg font-bold text-slate-900">
         {technology.name}
       </h3>
 
+      {/* Description */}
       <p className="mt-2 flex-1 text-sm leading-6 text-gray-500">
         {technology.description}
       </p>
 
+      {/* Information */}
       <div className="mt-4 flex items-center justify-between text-xs text-gray-500">
         <span className="rounded-md bg-gray-50 px-2 py-2">
           {technology.category}
@@ -82,18 +98,31 @@ function TechnologyCard({
         </span>
       </div>
 
+      {/* Add Button */}
       <button
+        type="button"
         onClick={() => onAdd(technology)}
         disabled={isAdded}
-        className={`mt-4 w-full rounded-lg py-3 text-sm font-semibold transition ${
-          isAdded
-            ? "cursor-not-allowed bg-gray-200"
-            : "bg-slate-950 text-white hover:bg-slate-800"
-        }`}
+        className={`
+          mt-4
+          w-full
+          rounded-lg
+          py-3
+          text-sm
+          font-semibold
+          transition-all
+          duration-200
+
+          ${
+            isAdded
+              ? "cursor-not-allowed bg-gray-200"
+              : "cursor-pointer bg-slate-950 text-white hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-lg active:translate-y-0"
+          }
+        `}
       >
         {isAdded ? (
-         <span className="bg-[linear-gradient(to_right,red,orange,yellow,green,blue,indigo,violet)] bg-clip-text text-transparent font-bold">
-  ✓ Added to Stack
+          <span className="bg-[linear-gradient(to_right,red,orange,yellow,green,blue,indigo,violet)] bg-clip-text font-bold text-transparent">
+            ✓ Added to Stack
           </span>
         ) : (
           "Add to Stack"
